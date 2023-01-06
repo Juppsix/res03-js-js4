@@ -62,28 +62,39 @@ function exercice4()
         }
     ];
     let btn4 = document.getElementById("btn-add-hero");
-    
+    let tbody = document.querySelector("tbody");
+    let count =0;
     btn4.addEventListener("click", function(event){
         
-        let tr = document.createElement("tr");
-        let td = document.createElement("td");
-        let th = document.createElement("th");
-        let name = document.createTextNode("Clark Kent")
-        let name2 = document.createTextNode("Diana Prince")
-        let name3 = document.createTextNode("Tony Stark")
-        let secret = document.createTextNode("Superman")
-        let secret2 = document.createTextNode("Wonder Woman")
-        let secret3 = document.createTextNode("Iron Man")
+        let tr=document.createElement("tr");
+        let tdName=document.createElement("td");
+        let tdSecret=document.createElement("td");
+        let name=document.createTextNode(heroes[count].name);
+        let secret=document.createTextNode(heroes[count].secret);
         
-        
-        
-        tr.appendChild("name")
+        tbody.appendChild(tr);
+        tr.appendChild(tdName);
+        tr.appendChild(tdSecret);
+        tdName.appendChild(name);
+        tdSecret.appendChild(secret);
+        count++;
     });
 }
 
 function exercice5()
 {
-
+let btn5 = document.getElementById("btn-turn");
+btn5.addEventListener("click", function (event){
+    
+    let section1 = document.getElementById("blue");
+     let section2 = document.getElementById("red");
+      let section3 = document.getElementById("green");
+    
+    
+    section1.style.backgroundColor = "red";;
+    section2.style.backgroundColor = "blue";;
+    section3.style.backgroundColor = "green";;
+});
 }
 
 function exercice6()
